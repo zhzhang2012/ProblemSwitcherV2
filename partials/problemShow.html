@@ -1,0 +1,9 @@
+<div id='problem{{problem.id}}' ng-show='start && shouldShow(problem.id-1)'>
+	<p>
+		<span>题目名称：{{problem.body}}</span><br>
+      	<div ng-repeat='choice in problem.choices'>
+      		<input type='radio' name='choices{{problem.id}}' value='{{choice.id}}' ng-model="$parent.answer">{{choice.body}}
+      	</div><br>
+    	<button id='button{{problem.id}}' ng-click='showNext(problem.id)'>继续</button>
+    </p>
+</div>
