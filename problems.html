@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+	<meta charset="utf-8" />
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="js/main.js"></script>
+  </head>
+  
+  <body ng-app="problemSwitcher">
+    <h2>Problem Switcher</h2>
+    <div ng-controller="SwitchCtrl">
+      <lesson>
+      	<button ng-hide='start' ng-click='initData()'>开始答题</button>
+      	<problem ng-repeat='problem in problems'></problem><br>
+      	<result ng-show="summary"></result>
+      </lesson>
+    </div>
+  </body>
+  
+</html>
